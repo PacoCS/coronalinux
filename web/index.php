@@ -25,12 +25,9 @@ $dbconn = pg_connect($dbopts) or die('No se ha podido conectar: ' . pg_last_erro
 
 echo "CONNECTAT!";
 
-if (isset($POST["usuari"]) ) {
+if (isset($_POST["usuari"]) ) {
   $usuari = $_POST["usuari"];
   $contrasenya = $_POST["contrasenya"];
-
-
-
   $query = "SELECT * from usuaris where nom='$nom'";
   $result = pg_query($query) or die('La consulta fallo: ' . pg_last_error());
 
