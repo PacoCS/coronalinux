@@ -33,7 +33,7 @@ if (isset($_POST["usuari"]) ) {
 
 
   $line = pg_fetch_array($result, null, PGSQL_ASSOC);
-  if ($_POST["usuari"] == $line["nom"] && $_POST["contrasenya"] == $line["password"]]{
+  if ($_POST["usuari"] == $line["nom"] && $_POST["contrasenya"] == $line["password"]){
     echo "Login correcto";
   }else{
     echo "Login incorrecto";
