@@ -31,16 +31,13 @@ if (isset($_POST["usuari"]) ) {
   $query = "SELECT * from usuaris where nom='$nom'";
   $result = pg_query($query) or die('La consulta fallo: ' . pg_last_error());
 
-  echo "<table>\n";
-  while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
-      echo "\t<tr>\n";
-      foreach ($line as $col_value) {
-          echo "\t\t<td>$col_value</td>\n";
-      }
-      echo "\t</tr>\n";
-  }
-  echo "</table>\n";
-  echo "OLA";
+
+  $line = pg_fetch_array($result, null, PGSQL_ASSOC);
+  if ($_POST["usuari"] == $line["nom"] && $_POST["contrasenya"] == $line["password"]]{
+    echo "Login correcto";
+  }else{
+    echo "Login incorrecto";
+  };
 
 };
 
