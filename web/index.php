@@ -33,7 +33,6 @@ if (isset($_POST["usuari"]) ) {
 
 
   $line = pg_fetch_array($result, null, PGSQL_ASSOC);
-  var_dump($line);
   if ($_POST["usuari"] == $line["nom"] && $_POST["contrasenya"] == $line["password"]){
     echo "Login correcto";
   }else{
@@ -45,27 +44,6 @@ if (isset($_POST["usuari"]) ) {
 
 
 
-
-// Realizando una consulta SQL
-// $query = 'SELECT * FROM authors';
-// $result = pg_query($query) or die('La consulta fallo: ' . pg_last_error());
-//
-// // Imprimiendo los resultados en HTML
-// echo "<table>\n";
-// while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
-//     echo "\t<tr>\n";
-//     foreach ($line as $col_value) {
-//         echo "\t\t<td>$col_value</td>\n";
-//     }
-//     echo "\t</tr>\n";
-// }
-// echo "</table>\n";
-//
-// // Liberando el conjunto de resultados
-// pg_free_result($result);
-//
-// // Cerrando la conexión
-// pg_close($dbconn);
 ?>
 
 
