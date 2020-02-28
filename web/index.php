@@ -45,7 +45,7 @@ if (isset($POST["usuari"]) ) {
   }
   echo "</table>\n";
 
-}
+};
 
 // Realizando una consulta SQL
 // $query = 'SELECT * FROM authors';
