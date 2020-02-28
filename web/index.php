@@ -43,8 +43,13 @@ if (isset($POST["usuari"]) ) {
       echo "\t</tr>\n";
   }
   echo "</table>\n";
+  echo "OLA";
 
 };
+
+
+
+
 
 // Realizando una consulta SQL
 // $query = 'SELECT * FROM authors';
