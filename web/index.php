@@ -23,7 +23,7 @@ $dbopts = getenv('DATABASE_URL');
 // Conectando y seleccionado la base de datos
 $dbconn = pg_connect($dbopts) or die('No se ha podido conectar: ' . pg_last_error());
 
-echo "CONNECTAT!";
+echo "CONNECTAT!<br>";
 
 if (isset($_POST["usuari"]) ) {
   $usuari = $_POST["usuari"];
@@ -33,8 +33,8 @@ if (isset($_POST["usuari"]) ) {
 
 
   $line = pg_fetch_array($result, null, PGSQL_ASSOC);
+  var_dump($line);
   if ($_POST["usuari"] == $line["nom"] && $_POST["contrasenya"] == $line["password"]){
-    echo "<br>";
     echo "Login correcto";
   }else{
     echo "Login incorrecto";
