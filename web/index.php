@@ -28,7 +28,7 @@ echo "CONNECTAT!<br>";
 if (isset($_POST["usuari"]) ) {
   $usuari = $_POST["usuari"];
   $contrasenya = $_POST["contrasenya"];
-  $query = "SELECT * from usuaris where nom='$nom'";
+  $query = "SELECT * from usuaris where nom='$usuari'";
   $result = pg_query($query) or die('La consulta fallo: ' . pg_last_error());
 
 
